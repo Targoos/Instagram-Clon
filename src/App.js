@@ -1,25 +1,18 @@
-import React, { Fragment } from 'react';
-import Header from './Components/Header';
-import Profile from './Components/Profile';
-import Footer from './Components/Footer';
-import styled from 'styled-components';
-
-const BackgroundContainer = styled.div`
-  background-color: #fafafa;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-`;
+import React from "react";
+import { BrowserRouter as Browse, Route } from "react-router-dom";
+import Header from "./Components/Header.jsx";
+import Profile from "./Components/Profile.jsx";
+import Footer from "./Components/Footer.jsx";
+import styled from "styled-components";
 
 function App() {
   return (
-    <Fragment>
-      <Header/>
-      <BackgroundContainer>
-        <Profile/>
-        <Footer/>
-      </BackgroundContainer>
-    </Fragment>
+    <Browse>
+      <Route path={"#!"} />
+      <Header />
+      <Profile />
+      <Footer />
+    </Browse>
   );
 }
 
